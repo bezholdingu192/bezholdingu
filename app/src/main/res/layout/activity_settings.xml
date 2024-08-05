@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="cz.fromgithub.bezholdingu.SettingsActivity">
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fadeScrollbars="true"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="Načtení kódu" />
+
+            <Switch
+                android:id="@+id/swPipnout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ulozitZmenu"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="při načtení kódu pípnout"
+                android:visibility="visible"
+                tools:checked="true" />
+
+            <Switch
+                android:id="@+id/swZavibrovat"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ulozitZmenu"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="při načtení kódu zavibrovat"
+                tools:checked="false" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="Označování zboží" />
+
+            <Switch
+                android:id="@+id/swToman"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ulozitZmenu"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="označovat i zboží politika Tomana"
+                tools:checked="false" />
+
+            <Switch
+                android:id="@+id/swRusko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ulozitZmenu"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="označovat i zboží z Ruska"
+                tools:checked="false" />
+
+            <Switch
+                android:id="@+id/swBelorusko"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="ulozitZmenu"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="označovat i zboží z Běloruska"
+                tools:checked="false" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="Otáčení displeje při načítání kódů" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp">
+
+                <RadioButton
+                    android:id="@+id/rb_otaceni_neblokovat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:onClick="ulozitZmenu"
+                    android:paddingTop="15dp"
+                    android:text="povolit otáčení" />
+
+                <RadioButton
+                    android:id="@+id/rb_otaceni_portrait"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:onClick="ulozitZmenu"
+                    android:paddingTop="15dp"
+                    android:text="displej vždy nastojato" />
+
+                <RadioButton
+                    android:id="@+id/rb_otaceni_landscape"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:onClick="ulozitZmenu"
+                    android:paddingTop="15dp"
+                    android:text="displej vždy naležato" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="Upozorňování na aktualizaci dat" />
+
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp">
+
+                <RadioButton
+                    android:id="@+id/rb_aktualizace_mesic"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:onClick="ulozitZmenu"
+                    android:paddingTop="15dp"
+                    android:text="upozornit na měsíc stará data" />
+
+                <RadioButton
+                    android:id="@+id/rb_aktualizace_3mesice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:onClick="ulozitZmenu"
+                    android:paddingTop="15dp"
+                    android:text="upozornit na 3 měsíce stará data" />
+
+                <RadioButton
+                    android:id="@+id/rb_aktualizace_vypnout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layoutDirection="rtl"
+                    android:onClick="ulozitZmenu"
+                    android:paddingTop="15dp"
+                    android:text="na aktualizace dat neupozorňovat" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:paddingLeft="15dp"
+                android:paddingTop="20dp"
+                android:text="Zobrazení reklam" />
+
+            <TextView
+                android:id="@+id/txtSeekBarData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="Datové připojení: reklamy nezobrazovat"
+                android:textColor="#FFFFFF" />
+
+            <SeekBar
+                android:id="@+id/sbFreqData"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="20dp" />
+
+            <TextView
+                android:id="@+id/txtSeekBarWiFi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="5dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:text="WiFi připojení: reklamy nezobrazovat"
+                android:textColor="#FFFFFF" />
+
+            <SeekBar
+                android:id="@+id/sbFreqWifi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:max="10"
+                android:paddingStart="60dp"
+                android:paddingLeft="60dp"
+                android:paddingTop="15dp"
+                android:paddingEnd="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="80dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
